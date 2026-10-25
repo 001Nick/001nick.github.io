@@ -1,1 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nick | Personal Site</title>
+  <meta name="description" content="Personal site and project portfolio.">
+  <style>
+    :root {
+      --bg: #f7f6f2;
+      --fg: #1c1c1a;
+      --muted: #66655f;
+      --card: #ffffff;
+      --border: #e3e1d9;
+      --accent: #2a6f5c;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151614;
+        --fg: #ecebe6;
+        --muted: #9b9a92;
+        --card: #1e201d;
+        --border: #302f2b;
+        --accent: #6fcfb2;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+    header { padding: 72px 0 32px; }
+    h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 8px; letter-spacing: -0.02em; }
+    .tagline { color: var(--muted); font-size: 1.15rem; margin: 0; }
+    nav { margin-top: 24px; display: flex; gap: 20px; flex-wrap: wrap; font-weight: 500; }
+    section { padding: 28px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 16px; }
+    .grid { display: grid; gap: 16px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .card h3 { margin: 0 0 4px; font-size: 1.1rem; }
+    .card p { margin: 0 0 8px; color: var(--muted); }
+    .tag { font-size: 0.8rem; color: var(--accent); }
+    footer { padding: 32px 0 56px; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Hi, I'm Nick.</h1>
+      <p class="tagline">I build things and write about what I learn along the way.</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Welcome to my corner of the internet. This is where I keep my projects,
+        notes and experiments. Replace this paragraph with a short intro about
+        who you are and what you work on.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3><a href="https://github.com/001nick">Project one</a></h3>
+          <p>A one-line description of what this project does and why it exists.</p>
+          <span class="tag">HTML · JavaScript</span>
+        </div>
+        <div class="card">
+          <h3><a href="https://github.com/001nick">Project two</a></h3>
+          <p>Another short description. Swap in your real projects and links.</p>
+          <span class="tag">Python</span>
+        </div>
+        <div class="card">
+          <h3><a href="https://github.com/001nick">Project three</a></h3>
+          <p>Add as many cards as you like by copying one of these blocks.</p>
+          <span class="tag">Open source</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Find me on <a href="https://github.com/001nick">GitHub</a>
+        or reach out at <a href="mailto:you@example.com">you@example.com</a>.
+      </p>
+    </section>
+
+    <footer>
+      &copy; <span id="year"></span> Nick. Built with plain HTML and hosted on GitHub Pages.
+    </footer>
+  </div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
